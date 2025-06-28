@@ -1,0 +1,29 @@
+@startuml
+title Purchase Flow Sequence Diagram
+
+actor User
+
+participant Program
+participant ShoppingCart
+participant DiscountStrategy
+participant Order
+participant PaymentProcessor
+participant OrderService
+
+User -> Program : Starts purchase
+Program -> ShoppingCart : AddItem()
+Program -> ShoppingCart : AddItem()
+
+Program -> ShoppingCart : TotalPrice()
+Program -> DiscountStrategy : ApplyDiscount(total)
+
+Program -> Order : Create Order(customer, cart items, discount)
+Program -> PaymentProcessor : Create PaymentProcessor()
+
+Program -> OrderService : PlaceOrder(order)
+OrderService -> PaymentProcessor : ProcessPayment(order.TotalPrice)
+PaymentProcessor --> OrderService : PaymentResult
+
+OrderService --> Program : Order Confirmation
+
+@enduml

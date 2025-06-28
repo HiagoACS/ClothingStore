@@ -1,0 +1,58 @@
+@startuml
+title Clothing Store Class Diagram
+
+class Customer {
+  - Name : string
+  - Email : string
+}
+
+abstract class Clothing {
+  - Name : string
+  - Color : string
+  - Size : string
+  - Price : decimal
+  + Description() : string
+}
+
+class Shirt {
+}
+
+class Pants {
+  - Length : string
+  - Fit : string
+}
+
+class ShoppingCart {
+  - Items : IReadOnlyList<Clothing>
+  + AddItem()
+  + RemoveItem()
+  + TotalPrice()
+}
+
+class Order {
+  - OrderId : int
+  - Customer : Customer
+  - Items : List<Clothing>
+  - OrderDate : DateTime
+  - TotalPrice : decimal
+  - DiscountStrategy : IDiscountStrategy
+}
+
+interface IDiscountStrategy {
+  + ApplyDiscount(decimal) : decimal
+}
+
+interface IPaymentProcessor {
+  + ProcessPayment(decimal) : void
+}
+
+' Inheritance
+Shirt -|> Clothing
+Pants -|> Clothing
+
+' Associations
+Order --> Customer
+Order --> "0..*" Clothing
+ShoppingCart --> "0..*" Clothing
+
+@enduml
