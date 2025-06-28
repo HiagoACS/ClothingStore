@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ClothingStore.Core.Models
+namespace ClothingStore.Core.Models.ClothingItems
 {
 	public class Shirt : Clothing
 	{

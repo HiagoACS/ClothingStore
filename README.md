@@ -6,46 +6,47 @@ A console application for a clothing sales system, developed to practice and dem
 
 ## 🚀 Features
 
-- Catalog of clothes with different types and attributes
-- Shopping cart system
-- Order creation and summary
-- Price calculation with possible discounts
-- Clear separation of responsibilities following SOLID
+- Catalog of clothes with different types and attributes  
+- Shopping cart system  
+- Order creation and summary  
+- Price calculation with possible discounts  
+- Payment processing with different strategies (credit/debit)  
+- Clear separation of responsibilities following SOLID principles  
 
 ---
 
 ## 🔨 Technologies
 
-- C# (.NET)
-- Console application
-- Designed to support evolution into ASP.NET Core or other UIs
+- C# (.NET)  
+- Console application  
+- Designed to support evolution into ASP.NET Core or other UIs  
 
 ---
 
 ## 🛤 Roadmap
 
 ### ✅ Phase 1 - Basic Domain & CRUD
-- [ ] Create core entities: Clothes, Customer, Shopping Cart, Order
-- [ ] Implement basic CRUD operations in console
-- [ ] Calculate total order price
+- ✅ Create core entities: Clothes, Customer, Shopping Cart, Order  
+- ✅ Implement basic CRUD operations in console  
+- ✅ Calculate total order price  
 
-### 🟡 Phase 2 - SOLID Application
-- [ ] Apply Single Responsibility Principle (SRP)
-- [ ] Apply Open/Closed Principle (OCP) with extendable discount system
-- [ ] Apply Liskov Substitution Principle (LSP) with inheritance for clothing types
-- [ ] Apply Interface Segregation Principle (ISP) for payment and discount services
-- [ ] Apply Dependency Inversion Principle (DIP) for service dependencies
+### ✅ Phase 2 - SOLID Application
+- ✅ Apply Single Responsibility Principle (SRP)  
+- ✅ Apply Open/Closed Principle (OCP) with extendable discount system  
+- ✅ Apply Liskov Substitution Principle (LSP) with inheritance for clothing types  
+- ✅ Apply Interface Segregation Principle (ISP) for payment and discount services  
+- ✅ Apply Dependency Inversion Principle (DIP) for service dependencies  
 
 ### 🔵 Phase 3 - Persistence & Advanced Features
-- [ ] Implement data persistence (file storage or database)
-- [ ] Add order history per customer
-- [ ] Implement basic authentication for customers
+- [ ] Implement data persistence (file storage or database)  
+- [ ] Add order history per customer  
+- [ ] Implement basic authentication for customers  
 
 ### 🟣 Phase 4 - Web Migration
-- [ ] Create ASP.NET Core Web API project
-- [ ] Reuse domain logic in web backend
-- [ ] Build a simple frontend (Razor Pages or SPA)
-- [ ] Deploy a demo version online
+- [ ] Create ASP.NET Core Web API project  
+- [ ] Reuse domain logic in web backend  
+- [ ] Build a simple frontend (Razor Pages or SPA)  
+- [ ] Deploy a demo version online  
 
 ---
 
