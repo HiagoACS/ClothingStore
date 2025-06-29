@@ -5,9 +5,10 @@ namespace ClothingStore.Core.Models.ClothingItems
 	public class Shirt : Clothing
 	{
 		
-		public Shirt(string name, string color, string size, decimal price)
+		public Shirt(int id, string name, string color, string size, decimal price)
 		{
-			Name = name;
+			Id = id;
+            Name = name;
 			Color = color;
 			Size = size;
 			Price = price;

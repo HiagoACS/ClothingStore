@@ -1,7 +1,7 @@
 ﻿using ClothingStore.Core.Interfaces;
 using ClothingStore.Core.Models;
 namespace ClothingStore.Core.Services{
-    public class OrderService
+    public class OrderService : IOrderService
     {
         private readonly IPaymentProcess _paymentProcessor;
         public OrderService(IPaymentProcess paymentProcessor)

@@ -6,8 +6,9 @@ namespace ClothingStore.Core.Models.ClothingItems
     {
         public string Length { get; set; } // Length of the pants (e.g., "30", "32", "34")
         public string Fit { get; set; } // Fit type (e.g., "Slim", "Regular", "Relaxed")
-        public Pants(string name, string color, string size, decimal price, string length, string fit)
+        public Pants(int id, string name, string color, string size, decimal price, string length, string fit)
         {
+            Id = id;
             Name = name;
             Color = color;
             Size = size;

@@ -17,8 +17,8 @@ ClothingStore/
 │ │ └── Models/ClothingItems/ # Specific clothing subclasses (e.g., Shirt, Pants)  
 │ ├── Interfaces/ # Interfaces for abstractions (e.g., IDiscountStrategy, IPaymentProcessor)  
 │ └── Services/ # Business logic and services (e.g., OrderService, discount and payment implementations)  
-│ │ └─ Services/Discounts/ # Discount strategies (e.g., PercentageDiscount, NoDiscount)  
-│ │ └─ Services/Payments/ # Payment processors (e.g., CreditCardPaymentProcessor, DebitCardPaymentProcessor)  
+│ │ ├── Services/Discounts/ # Discount strategies (e.g., PercentageDiscount, NoDiscount)  
+│ │ └── Services/Payments/ # Payment processors (e.g., CreditCardPaymentProcessor, DebitCardPaymentProcessor)  
 
 
 ---
