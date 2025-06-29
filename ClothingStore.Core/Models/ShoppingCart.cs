@@ -31,6 +31,11 @@ namespace ClothingStore.Core.Models
         {
             return _items.Sum(item => item.Price);
         }
+
+        public void ClearCart()
+        {
+            _items.Clear();
+        }
     }
 }
 

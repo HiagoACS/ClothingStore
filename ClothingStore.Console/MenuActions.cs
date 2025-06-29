@@ -47,9 +47,10 @@ public class MenuActions
         Console.WriteLine("Welcome to the Clothing Store!");
         Console.WriteLine("1. View Products");
         Console.WriteLine("2. Add Product to Cart");
-        Console.WriteLine("3. View Cart");
-        Console.WriteLine("4. Checkout");
-        Console.WriteLine("5. Exit");
+        Console.WriteLine("3. Remove Product from Cart");
+        Console.WriteLine("4. View Cart");
+        Console.WriteLine("5. Checkout");
+        Console.WriteLine("6. Exit");
     }
 
     public Clothing? GetProductById(int id)
@@ -114,7 +115,7 @@ public class MenuActions
             Console.WriteLine("Items in your cart:");
             foreach (var item in cart.Items)
             {
-                Console.WriteLine(item.Description());
+                Console.WriteLine($"{item.Id}, {item.Description()}");
             }
             Console.WriteLine($"Total Price: {cart.TotalPrice():C}");
         }
@@ -161,7 +162,11 @@ public class MenuActions
             return;
         }
         Console.WriteLine("Order placed successfully!");
-
+        InvoiceService.GenerateInvoice(order);
         Console.WriteLine("Thank you for your purchase!");
+        // Optionally clear the cart after checkout
+        cart.ClearCart();
+        Console.ReadKey();
+        Console.Clear();
     }
 }

@@ -1,4 +1,5 @@
 ﻿using ClothingStore.Core.Models;
+using ClothingStore.Core.Services;
 
 class Program
 {
@@ -29,12 +30,17 @@ class Program
                 case "3":
                     Console.Clear();
                     menuActions.ViewCartItems(shoppingCart);
+                    menuActions.RemoveItemFromCart(shoppingCart);
                     break;
                 case "4":
                     Console.Clear();
-                    menuActions.Checkout(customer, shoppingCart);
+                    menuActions.ViewCartItems(shoppingCart);
                     break;
                 case "5":
+                    Console.Clear();
+                    menuActions.Checkout(customer, shoppingCart);
+                    break;
+                case "6":
                     Console.Clear();
                     running = false;
                     Console.WriteLine("Goodbye!");
