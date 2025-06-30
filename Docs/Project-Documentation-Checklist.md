@@ -30,6 +30,7 @@ This checklist helps ensure that all necessary documentation is created and main
 - [ ] `package-diagram.puml` – structure of code packages/namespaces.
 - [ ] `deployment-diagram.puml` – system deployment architecture (for future web/cloud).
 - [ ] `infrastructure-diagram.puml` – external services like database, payment gateways, etc.
+- [x] `er-diagram.puml` – entity-relationship diagram for database design.`
 
 ---
 

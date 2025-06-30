@@ -1,0 +1,48 @@
+﻿@startuml
+title 📊 Clothing Store Database ER Diagram
+
+entity "Customers" as Customers {
+  +CustomerId : SERIAL PK
+  Name : VARCHAR
+  Email : VARCHAR
+}
+
+entity "ClothingItems" as ClothingItems {
+  +ClothingItemId : SERIAL PK
+  Name : VARCHAR
+  Color : VARCHAR
+  Size : VARCHAR
+  Price : DECIMAL
+  Type : VARCHAR
+}
+
+entity "Orders" as Orders {
+  +OrderId : SERIAL PK
+  CustomerId : INTEGER FK -> Customers.CustomerId
+  OrderDate : TIMESTAMP
+  TotalPrice : DECIMAL
+  DiscountApplied : DECIMAL
+}
+
+entity "OrderItems" as OrderItems {
+  +OrderItemId : SERIAL PK
+  OrderId : INTEGER FK -> Orders.OrderId
+  ClothingItemId : INTEGER FK -> ClothingItems.ClothingItemId
+  Quantity : INTEGER
+}
+
+entity "Payments" as Payments {
+  +PaymentId : SERIAL PK
+  OrderId : INTEGER FK -> Orders.OrderId
+  PaymentType : VARCHAR
+  Amount : DECIMAL
+  PaymentDate : TIMESTAMP
+  Status : VARCHAR
+}
+
+Customers ||--o{ Orders : "places"
+Orders ||--o{ OrderItems : "contains"
+OrderItems }o--|| ClothingItems : "refers"
+Orders ||--o{ Payments : "paid by"
+
+@enduml
