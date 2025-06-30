@@ -7,10 +7,11 @@ A console application for a clothing sales system, developed to practice and dem
 ## 🚀 Features
 
 - Catalog of clothes with different types and attributes  
-- Shopping cart system  
+- Shopping cart system with add and remove functionality  
 - Order creation and summary  
 - Price calculation with possible discounts  
 - Payment processing with different strategies (credit/debit)  
+- Invoice generation and saving to text files  
 - Clear separation of responsibilities following SOLID principles  
 
 ---
@@ -38,7 +39,8 @@ A console application for a clothing sales system, developed to practice and dem
 - ✅ Apply Dependency Inversion Principle (DIP) for service dependencies  
 
 ### 🔵 Phase 3 - Persistence & Advanced Features
-- [ ] Implement data persistence (file storage or database)  
+- ✅ Implement invoice generation and saving to files  
+- [ ] Implement data persistence for orders (file storage or database)  
 - [ ] Add order history per customer  
 - [ ] Implement basic authentication for customers  
 

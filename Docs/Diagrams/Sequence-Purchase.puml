@@ -9,6 +9,7 @@ participant DiscountStrategy
 participant Order
 participant PaymentProcessor
 participant OrderService
+participant InvoiceService
 
 User -> Program : Starts purchase
 Program -> ShoppingCart : AddItem()
@@ -25,5 +26,9 @@ OrderService -> PaymentProcessor : ProcessPayment(order.TotalPrice)
 PaymentProcessor --> OrderService : PaymentResult
 
 OrderService --> Program : Order Confirmation
+
+Program -> InvoiceService : GenerateInvoice(order)
+
+Program --> User : Show confirmation & invoice info
 
 @enduml

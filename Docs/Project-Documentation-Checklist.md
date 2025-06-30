@@ -20,6 +20,7 @@ This checklist helps ensure that all necessary documentation is created and main
 - [ ] `registration-flow.md` – new customer registration flow.
 - [ ] `password-reset-flow.md` – password recovery flow.
 - [x] `purchase-flow.md` – detailed step-by-step purchase flow.
+- [x] `invoice-flow.md` – invoice generation and saving flow.
 
 ---
 
@@ -82,6 +83,6 @@ This checklist helps ensure that all necessary documentation is created and main
 ---
 
 ## 📌 Practical Tips
-- Organize documentation inside a `/docs` folder in your repository.
-- Use subfolders like `/docs/diagrams` and `/docs/flows` for better structure.
-- Prefer Markdown and PlantUML files for easy version control and collaboration.
+- Organized documentation inside a `/docs` folder in your repository.
+- Used subfolders like `/docs/diagrams` and `/docs/flows` for better structure.
+- Prefered Markdown and PlantUML files for easy version control and collaboration.

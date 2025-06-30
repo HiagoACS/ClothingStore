@@ -16,10 +16,9 @@ ClothingStore/
 │ ├── Models/ # Domain models (e.g., Customer, Clothing, Order)  
 │ │ └── Models/ClothingItems/ # Specific clothing subclasses (e.g., Shirt, Pants)  
 │ ├── Interfaces/ # Interfaces for abstractions (e.g., IDiscountStrategy, IPaymentProcessor)  
-│ └── Services/ # Business logic and services (e.g., OrderService, discount and payment implementations)  
-│ │ ├── Services/Discounts/ # Discount strategies (e.g., PercentageDiscount, NoDiscount)  
-│ │ └── Services/Payments/ # Payment processors (e.g., CreditCardPaymentProcessor, DebitCardPaymentProcessor)  
-
+│ └── Services/ # Business logic and services (e.g., OrderService, InvoiceService, discount and payment implementations)  
+│   ├── Services/Discounts/ # Discount strategies (e.g., PercentageDiscount, NoDiscount)  
+│   └── Services/Payments/ # Payment processors (e.g., CreditCardPaymentProcessor, DebitCardPaymentProcessor)  
 
 ---
 
@@ -43,12 +42,13 @@ ClothingStore/
   - `OrderService`: Handles order placement and payment processing.
   - Discount strategies (e.g., `PercentageDiscount`, `NoDiscount`).
   - Payment processors (e.g., `CreditCardPayment`, `DebitCardPayment`).
+  - **InvoiceService**: Responsible for generating and saving invoices related to orders.
 
 ### 4. Console Application (`ClothingStore.Console`)
 - Entry point that interacts with the user:
   - Handles input/output.
   - Creates and coordinates domain objects and services.
-  - Demonstrates system usage.
+  - Demonstrates system usage including order placement, payment, and invoice generation.
 
 ---
 
@@ -59,6 +59,7 @@ ClothingStore/
 - Services depend on interfaces (abstractions), not concrete implementations, following the **Dependency Inversion Principle (DIP)**.
 - Domain models are kept clean and focused on data and behavior, following the **Single Responsibility Principle (SRP)**.
 - Interface segregation is applied to keep interfaces specific and minimal.
+- The **OrderService** orchestrates payment processing and invokes the **InvoiceService** to generate the invoice after successful payment.
 
 ---
 
@@ -66,7 +67,7 @@ ClothingStore/
 
 | Principle                | Where Applied                                   |
 |-------------------------|------------------------------------------------|
-| SRP (Single Responsibility) | Each class has a focused responsibility (e.g., Customer, Order, ShoppingCart) |
+| SRP (Single Responsibility) | Each class has a focused responsibility (e.g., Customer, Order, ShoppingCart, InvoiceService) |
 | OCP (Open/Closed)        | Discount system is extendable via `IDiscountStrategy` interface |
 | LSP (Liskov Substitution) | Clothing subclasses (`Shirt`, `Pants`) can replace base class |
 | ISP (Interface Segregation) | Payment and discount interfaces are specific and minimal |
@@ -76,7 +77,7 @@ ClothingStore/
 
 ## 📈 Future Considerations
 
-- Implement persistence layer (database or file storage) for orders and customers.
+- Implement persistence layer (database or file storage) for orders, customers, and invoices.
 - Add authentication and authorization services.
 - Create a web API using ASP.NET Core reusing Core domain logic.
 - Develop a front-end UI (Razor Pages, Blazor, or SPA frameworks).
@@ -85,4 +86,3 @@ ClothingStore/
 ---
 
 *This architecture aims to create a maintainable, extensible, and testable system following best practices and design principles.*
-
