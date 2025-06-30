@@ -51,10 +51,6 @@ Concrete class representing pants.
 - **Properties (inherited from Clothing):**
   - `Name`, `Color`, `Size`, `Price`.
 
-- **Additional Properties:**
-  - `Length (string)`: Length of the pants (e.g., "30", "32", "34").
-  - `Fit (string)`: Fit type of the pants (e.g., "Slim", "Regular", "Relaxed").
-
 - **Methods:**
   - `Description()`: Returns a formatted description of the pants.
 
