@@ -4,8 +4,6 @@ namespace ClothingStore.Core.Models.ClothingItems
 {
     public class Pants : Clothing
     {
-        public string Length { get; set; } // Length of the pants (e.g., "30", "32", "34")
-        public string Fit { get; set; } // Fit type (e.g., "Slim", "Regular", "Relaxed")
         public Pants(int id, string name, string color, string size, decimal price)
         {
             Id = id;
