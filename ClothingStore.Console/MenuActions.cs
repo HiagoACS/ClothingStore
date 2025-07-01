@@ -54,6 +54,16 @@ public class MenuActions
         */
         LoadProductsFromDatabase();
     }
+    public static void DisplayMainMenu()
+    {
+        Console.WriteLine("Welcome to the Clothing Store!");
+        Console.WriteLine("1. View Products");
+        Console.WriteLine("2. Add Product to Cart");
+        Console.WriteLine("3. Remove Product from Cart");
+        Console.WriteLine("4. View Cart");
+        Console.WriteLine("5. Checkout");
+        Console.WriteLine("6. Exit");
+    }
     
     public void LoadProducts(string FilePath)
     {
@@ -124,16 +134,6 @@ public class MenuActions
         }
     }
 
-    public static void DisplayMainMenu()
-    {
-        Console.WriteLine("Welcome to the Clothing Store!");
-        Console.WriteLine("1. View Products");
-        Console.WriteLine("2. Add Product to Cart");
-        Console.WriteLine("3. Remove Product from Cart");
-        Console.WriteLine("4. View Cart");
-        Console.WriteLine("5. Checkout");
-        Console.WriteLine("6. Exit");
-    }
 
     public Clothing? GetProductById(int id)
     {
