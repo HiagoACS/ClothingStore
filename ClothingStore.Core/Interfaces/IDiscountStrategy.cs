@@ -2,8 +2,10 @@
 
 namespace ClothingStore.Core.Interfaces
 {
+
 	public interface IDiscountStrategy
 	{
-		decimal ApplyDiscount(decimal originalPrice);
+		public decimal _discountPercentage { get; set; }
+        decimal ApplyDiscount(decimal originalPrice);
 	}
 }

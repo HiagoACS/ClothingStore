@@ -15,6 +15,7 @@ namespace ClothingStore.Core.Services
             {
                 throw new ArgumentException("Customer name cannot be null or empty.", nameof(order.Customer.Name));
             }
+
             // Ensure the invoice directory exists
             var invoiceDir = "Invoices";
             // Create the directory if it does not exist

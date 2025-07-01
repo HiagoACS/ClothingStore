@@ -6,7 +6,7 @@ namespace ClothingStore.Core.Services.Discounts
 {
     public class PercentageDiscount : IDiscountStrategy
     {
-        private readonly decimal _discountPercentage;
+        public decimal _discountPercentage { get; set; }
         public PercentageDiscount(decimal discountPercentage)
         {
             if (discountPercentage < 0 || discountPercentage > 100)

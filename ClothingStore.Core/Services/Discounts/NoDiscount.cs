@@ -6,7 +6,7 @@ namespace ClothingStore.Core.Services.Discounts
 {
 	public class NoDiscount : IDiscountStrategy
 	{
-        // NoDiscount class implements IDiscountStrategy
+		public decimal _discountPercentage { get; set; } = 0m;
         public decimal ApplyDiscount(decimal originalPrice) => originalPrice;
 	}
 }

@@ -13,7 +13,7 @@ namespace ClothingStore.Core.Models
 
         public IDiscountStrategy DiscountStrategy { get; set; } // Default to no discount
 
-        public int OrderId { get; private set; } = new Random().Next(1000, 9999); // Simple random ID generation
+        public int OrderId { get; set; } // Simple random ID generation
         public Order(Customer customer, List<Clothing> items, IDiscountStrategy discountStrategy)
         {
             Customer = customer ?? throw new ArgumentNullException(nameof(customer), "Customer cannot be null");

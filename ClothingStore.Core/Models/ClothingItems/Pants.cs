@@ -11,6 +11,7 @@ namespace ClothingStore.Core.Models.ClothingItems
             Color = color;
             Size = size;
             Price = price;
+            Type = "Pants"; // Set the type to Pants
         }
         public override string Description()
         {
