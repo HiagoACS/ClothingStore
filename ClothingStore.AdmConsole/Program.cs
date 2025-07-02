@@ -32,6 +32,37 @@ class Program
                     Console.Clear();
                     menuActions.RemoveProduct();
                     break;
+                case "5":
+                    Console.Clear();
+                    menuActions.ViewCustomers();
+                    break;
+                case "6":
+                    Console.Clear();
+                    menuActions.AddNewCustomer();
+                    break;
+                case "7":
+                    Console.Clear();
+                    menuActions.UpdateCustomer();
+                    break;
+                case "8":
+                    Console.Clear();
+                    menuActions.RemoveCustomer();
+                    break;
+                case "9":
+                    Console.Clear();
+                    menuActions.ViewOrders();
+                    break;
+                case "10":
+                    Console.Clear();
+                    menuActions.GetOrder();
+                    break;
+                case "11":
+                    Console.Clear();
+                    menuActions.ViewPayments();
+                    break;
+                case "12":
+                    menuActions.GenerateMonthlyReport();
+                    break;
                 case "13":
                     Console.Clear();
                     running = false;

@@ -4,7 +4,7 @@ A console-based clothing sales system developed to practice and demonstrate the 
 
 The solution includes two separate console apps:
 - **ClothingStore.Console**: Customer interface for browsing products, shopping cart management, checkout, and invoice generation.
-- **ClothingStore.AdmConsole**: Admin interface for adding, updating, or deleting products, as well as viewing sales reports.
+- **ClothingStore.AdmConsole**: Admin interface for adding, updating, or deleting products, and anothers management tasks.
 
 ---
 
@@ -120,8 +120,8 @@ dotnet run
 
 - ✅ Orders, payments, and products stored in the database
 
-### 🔵 Phase 4 - Admin Features
-- ✅ Create admin console to manage products and view reports
+### ✅ Phase 4 - Admin Features
+- ✅ Create admin console to manage Database
 
 ### 🟣 Phase 5 - Web Migration (Planned)
 - [ ] Create ASP.NET Core Web API
